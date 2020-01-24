@@ -17,6 +17,11 @@
   shell: while sudo fuser /var/lib/dpkg/lock >/dev/null 2>&1; do sleep 1; done;
   changed_when: False
 
+- name: Wait for lock release on system packages front end
+  become: yes
+  shell: while sudo fuser /var/lib/dpkg/lock-frontend >/dev/null 2>&1; do sleep 1; done;
+  changed_when: False
+
 # - name: Wait for any possibly running unattended upgrade to finish
 #   raw: systemd-run --property="After=apt-daily.service apt-daily-upgrade.service" --wait /bin/true
 
@@ -49,7 +54,9 @@
   become: yes
   become_user: root
   apt:
-    name: python-pip
+    name:
+      - python3-pip
+      - python-pip
     state: present
 
 
@@ -72,6 +79,29 @@
     state: present
     update_cache: true
 
+- name: remove old pip2 packages
+  become: yes
+  become_user: root
+  pip:
+    name: '{{ rm_pip2_python_pkgs }}'
+    executable: pip2
+    state: absent
+
+- name: install pip3 packages
+  become: yes
+  become_user: root
+  pip:
+    name: '{{ pip_python_pkgs }}'
+    executable: pip3
+    state: present
+
+- name: remove old python libs
+  become: yes
+  become_user: root
+  apt:
+    name: '{{ rm_python_pkgs }}'
+    state: absent
+    autoremove: true
 
 # One day when aptitude is not needed
 # - name: remove aptitude

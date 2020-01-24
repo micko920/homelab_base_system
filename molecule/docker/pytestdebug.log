@@ -1,0 +1,465 @@
+versions pytest-4.6.9, py-1.8.1, python-2.7.13.final.0
+cwd=/home/michael/eas-code/ansible/homelab/roles/homelab_base_system/molecule/docker
+args=['--debug', '-p', 'no:cacheprovider', '--connection=ansible', '--ansible-inventory=/home/michael/.cache/molecule/homelab_base_system/docker/inventory/ansible_inventory.yml', '/home/michael/eas-code/ansible/homelab/roles/homelab_base_system/molecule/docker/tests/test_default.py', '-vvv']
+
+  pytest_cmdline_main [hook]
+      config: <_pytest.config.Config object at 0x7fdd1aa7dfd0>
+    pytest_plugin_registered [hook]
+        manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+        plugin: <Session docker exitstatus='<UNSET>' testsfailed=0 testscollected=0>
+    finish pytest_plugin_registered --> [] [hook]
+    pytest_configure [hook]
+        config: <_pytest.config.Config object at 0x7fdd1aa7dfd0>
+    early skip of rewriting module: py._io.terminalwriter [assertion]
+    early skip of rewriting module: py._io.unicodedata [assertion]
+    early skip of rewriting module: unicodedata [assertion]
+    early skip of rewriting module: py._io.termios [assertion]
+    early skip of rewriting module: termios [assertion]
+    early skip of rewriting module: py._io.fcntl [assertion]
+    early skip of rewriting module: py._io.struct [assertion]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <_pytest.config.Config object at 0x7fdd1aa7dfd0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.mark' from '/usr/local/lib/python2.7/dist-packages/_pytest/mark/__init__.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.main' from '/usr/local/lib/python2.7/dist-packages/_pytest/main.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.runner' from '/usr/local/lib/python2.7/dist-packages/_pytest/runner.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.fixtures' from '/usr/local/lib/python2.7/dist-packages/_pytest/fixtures.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.helpconfig' from '/usr/local/lib/python2.7/dist-packages/_pytest/helpconfig.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.python' from '/usr/local/lib/python2.7/dist-packages/_pytest/python.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.terminal' from '/usr/local/lib/python2.7/dist-packages/_pytest/terminal.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.debugging' from '/usr/local/lib/python2.7/dist-packages/_pytest/debugging.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.unittest' from '/usr/local/lib/python2.7/dist-packages/_pytest/unittest.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.capture' from '/usr/local/lib/python2.7/dist-packages/_pytest/capture.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.skipping' from '/usr/local/lib/python2.7/dist-packages/_pytest/skipping.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.tmpdir' from '/usr/local/lib/python2.7/dist-packages/_pytest/tmpdir.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.monkeypatch' from '/usr/local/lib/python2.7/dist-packages/_pytest/monkeypatch.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.recwarn' from '/usr/local/lib/python2.7/dist-packages/_pytest/recwarn.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.pastebin' from '/usr/local/lib/python2.7/dist-packages/_pytest/pastebin.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.nose' from '/usr/local/lib/python2.7/dist-packages/_pytest/nose.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.assertion' from '/usr/local/lib/python2.7/dist-packages/_pytest/assertion/__init__.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.junitxml' from '/usr/local/lib/python2.7/dist-packages/_pytest/junitxml.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.resultlog' from '/usr/local/lib/python2.7/dist-packages/_pytest/resultlog.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.doctest' from '/usr/local/lib/python2.7/dist-packages/_pytest/doctest.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.freeze_support' from '/usr/local/lib/python2.7/dist-packages/_pytest/freeze_support.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.setuponly' from '/usr/local/lib/python2.7/dist-packages/_pytest/setuponly.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.setupplan' from '/usr/local/lib/python2.7/dist-packages/_pytest/setupplan.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.warnings' from '/usr/local/lib/python2.7/dist-packages/_pytest/warnings.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.logging' from '/usr/local/lib/python2.7/dist-packages/_pytest/logging.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.reports' from '/usr/local/lib/python2.7/dist-packages/_pytest/reports.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module 'testinfra.plugin' from '/usr/local/lib/python2.7/dist-packages/testinfra/plugin.py'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <CaptureManager _method='fd' _global_capturing=<MultiCapture out=<FDCapture 1 oldfd=5 _state='suspended'> err=<FDCapture 2 oldfd=6 _state='suspended'> in_=<FDCapture 0 oldfd=3 _state='started'> _state='suspended' _in_suspended='<UNSET>'> _current_item=None>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <Session docker exitstatus=0 testsfailed=0 testscollected=0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <_pytest.terminal.TerminalReporter object at 0x7fdd1a8d23d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <_pytest.logging.LoggingPlugin object at 0x7fdd1a949390>
+      finish pytest_plugin_registered --> [] [hook]
+    finish pytest_configure --> [] [hook]
+    pytest_sessionstart [hook]
+        session: <Session docker exitstatus=0 testsfailed=0 testscollected=0>
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <_pytest.config.Config object at 0x7fdd1aa7dfd0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.mark' from '/usr/local/lib/python2.7/dist-packages/_pytest/mark/__init__.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.main' from '/usr/local/lib/python2.7/dist-packages/_pytest/main.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.runner' from '/usr/local/lib/python2.7/dist-packages/_pytest/runner.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.fixtures' from '/usr/local/lib/python2.7/dist-packages/_pytest/fixtures.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.helpconfig' from '/usr/local/lib/python2.7/dist-packages/_pytest/helpconfig.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.python' from '/usr/local/lib/python2.7/dist-packages/_pytest/python.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.terminal' from '/usr/local/lib/python2.7/dist-packages/_pytest/terminal.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.debugging' from '/usr/local/lib/python2.7/dist-packages/_pytest/debugging.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.unittest' from '/usr/local/lib/python2.7/dist-packages/_pytest/unittest.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.capture' from '/usr/local/lib/python2.7/dist-packages/_pytest/capture.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.skipping' from '/usr/local/lib/python2.7/dist-packages/_pytest/skipping.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.tmpdir' from '/usr/local/lib/python2.7/dist-packages/_pytest/tmpdir.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.monkeypatch' from '/usr/local/lib/python2.7/dist-packages/_pytest/monkeypatch.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.recwarn' from '/usr/local/lib/python2.7/dist-packages/_pytest/recwarn.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.pastebin' from '/usr/local/lib/python2.7/dist-packages/_pytest/pastebin.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.nose' from '/usr/local/lib/python2.7/dist-packages/_pytest/nose.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.assertion' from '/usr/local/lib/python2.7/dist-packages/_pytest/assertion/__init__.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.junitxml' from '/usr/local/lib/python2.7/dist-packages/_pytest/junitxml.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.resultlog' from '/usr/local/lib/python2.7/dist-packages/_pytest/resultlog.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.doctest' from '/usr/local/lib/python2.7/dist-packages/_pytest/doctest.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.freeze_support' from '/usr/local/lib/python2.7/dist-packages/_pytest/freeze_support.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.setuponly' from '/usr/local/lib/python2.7/dist-packages/_pytest/setuponly.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.setupplan' from '/usr/local/lib/python2.7/dist-packages/_pytest/setupplan.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.warnings' from '/usr/local/lib/python2.7/dist-packages/_pytest/warnings.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.logging' from '/usr/local/lib/python2.7/dist-packages/_pytest/logging.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module '_pytest.reports' from '/usr/local/lib/python2.7/dist-packages/_pytest/reports.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <module 'testinfra.plugin' from '/usr/local/lib/python2.7/dist-packages/testinfra/plugin.py'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <CaptureManager _method='fd' _global_capturing=<MultiCapture out=<FDCapture 1 oldfd=5 _state='suspended'> err=<FDCapture 2 oldfd=6 _state='suspended'> in_=<FDCapture 0 oldfd=3 _state='started'> _state='suspended' _in_suspended='<UNSET>'> _current_item=None>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <Session docker exitstatus=0 testsfailed=0 testscollected=0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <_pytest.terminal.TerminalReporter object at 0x7fdd1a8d23d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <_pytest.logging.LoggingPlugin object at 0x7fdd1a949390>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7fdd1d75d410>
+          plugin: <_pytest.fixtures.FixtureManager object at 0x7fdd1a961f90>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_report_header [hook]
+          startdir: /home/michael/eas-code/ansible/homelab/roles/homelab_base_system/molecule/docker
+          config: <_pytest.config.Config object at 0x7fdd1aa7dfd0>
+      finish pytest_report_header --> [['rootdir: /home/michael/eas-code/ansible/homelab/roles/homelab_base_system/molecule/docker', 'plugins: testinfra-3.4.0'], ['using: pytest-4.6.9 pylib-1.8.1', 'setuptools registered plugins:', u'  testinfra-3.4.0 at /usr/local/lib/python2.7/dist-packages/testinfra/plugin.py']] [hook]
+    finish pytest_sessionstart --> [] [hook]
+    pytest_collection [hook]
+        session: <Session docker exitstatus=0 testsfailed=0 testscollected=0>
+    perform_collect <Session docker exitstatus=0 testsfailed=0 testscollected=0> ['/home/michael/eas-code/ansible/homelab/roles/homelab_base_system/molecule/docker/tests/test_default.py'] [collection]
+        pytest_collectstart [hook]
+            collector: <Session docker exitstatus=0 testsfailed=0 testscollected=0>
+        finish pytest_collectstart --> [] [hook]
+        pytest_make_collect_report [hook]
+            collector: <Session docker exitstatus=0 testsfailed=0 testscollected=0>
+        processing argument /home/michael/eas-code/ansible/homelab/roles/homelab_base_system/molecule/docker/tests/test_default.py [collection]
+            pytest_collect_file [hook]
+                path: /home/michael/eas-code/ansible/homelab/roles/homelab_base_system/molecule/docker/tests/test_default.py
+                parent: <Session docker exitstatus=0 testsfailed=0 testscollected=0>
+              pytest_pycollect_makemodule [hook]
+                  path: /home/michael/eas-code/ansible/homelab/roles/homelab_base_system/molecule/docker/tests/test_default.py
+                  parent: <Session docker exitstatus=0 testsfailed=0 testscollected=0>
+              finish pytest_pycollect_makemodule --> <Module tests/test_default.py> [hook]
+            finish pytest_collect_file --> [<Module tests/test_default.py>] [hook]
+          matchnodes [<Module tests/test_default.py>] [] [collection]
+            matchnodes finished ->  1 nodes [collection]
+        finish pytest_make_collect_report --> <CollectReport '' lenresult=1 outcome='passed'> [hook]
+        pytest_collectreport [hook]
+            report: <CollectReport '' lenresult=1 outcome='passed'>
+        finish pytest_collectreport --> [] [hook]
+    genitems <Module tests/test_default.py> [collection]
+      pytest_collectstart [hook]
+          collector: <Module tests/test_default.py>
+      finish pytest_collectstart --> [] [hook]
+      pytest_make_collect_report [hook]
+          collector: <Module tests/test_default.py>
+      find_module called for: test_default [assertion]
+      matched test file (was specified on cmdline): '/home/michael/eas-code/ansible/homelab/roles/homelab_base_system/molecule/docker/tests/test_default.py' [assertion]
+      found cached rewritten pyc for '/home/michael/eas-code/ansible/homelab/roles/homelab_base_system/molecule/docker/tests/test_default.py' [assertion]
+      matched marked file 'testinfra.utils' (from 'testinfra') [assertion]
+      find_module called for: testinfra.utils [assertion]
+      read only directory: '/usr/local/lib/python2.7/dist-packages/testinfra' [assertion]
+      rewriting '/usr/local/lib/python2.7/dist-packages/testinfra/utils.py' [assertion]
+      matched marked file 'testinfra.utils.__future__' (from 'testinfra') [assertion]
+      find_module called for: testinfra.utils.__future__ [assertion]
+      read only directory: '/usr/local/lib/python2.7/dist-packages/testinfra/utils' [assertion]
+      rewriting '/usr/local/lib/python2.7/dist-packages/testinfra/utils/__future__.py' [assertion]
+      matched marked file 'testinfra.utils.contextlib' (from 'testinfra') [assertion]
+      find_module called for: testinfra.utils.contextlib [assertion]
+      read only directory: '/usr/local/lib/python2.7/dist-packages/testinfra/utils' [assertion]
+      rewriting '/usr/local/lib/python2.7/dist-packages/testinfra/utils/contextlib.py' [assertion]
+      matched marked file 'testinfra.utils.locale' (from 'testinfra') [assertion]
+      find_module called for: testinfra.utils.locale [assertion]
+      read only directory: '/usr/local/lib/python2.7/dist-packages/testinfra/utils' [assertion]
+      rewriting '/usr/local/lib/python2.7/dist-packages/testinfra/utils/locale.py' [assertion]
+      matched marked file 'testinfra.utils.re' (from 'testinfra') [assertion]
+      find_module called for: testinfra.utils.re [assertion]
+      read only directory: '/usr/local/lib/python2.7/dist-packages/testinfra/utils' [assertion]
+      rewriting '/usr/local/lib/python2.7/dist-packages/testinfra/utils/re.py' [assertion]
+      matched marked file 'testinfra.utils.shutil' (from 'testinfra') [assertion]
+      find_module called for: testinfra.utils.shutil [assertion]
+      read only directory: '/usr/local/lib/python2.7/dist-packages/testinfra/utils' [assertion]
+      rewriting '/usr/local/lib/python2.7/dist-packages/testinfra/utils/shutil.py' [assertion]
+      matched marked file 'testinfra.utils.tempfile' (from 'testinfra') [assertion]
+      find_module called for: testinfra.utils.tempfile [assertion]
+      read only directory: '/usr/local/lib/python2.7/dist-packages/testinfra/utils' [assertion]
+      rewriting '/usr/local/lib/python2.7/dist-packages/testinfra/utils/tempfile.py' [assertion]
+      matched marked file 'testinfra.utils.six' (from 'testinfra') [assertion]
+      find_module called for: testinfra.utils.six [assertion]
+      read only directory: '/usr/local/lib/python2.7/dist-packages/testinfra/utils' [assertion]
+      rewriting '/usr/local/lib/python2.7/dist-packages/testinfra/utils/six.py' [assertion]
+      matched marked file 'testinfra.utils.socket' (from 'testinfra') [assertion]
+      find_module called for: testinfra.utils.socket [assertion]
+      read only directory: '/usr/local/lib/python2.7/dist-packages/testinfra/utils' [assertion]
+      rewriting '/usr/local/lib/python2.7/dist-packages/testinfra/utils/socket.py' [assertion]
+      matched marked file 'testinfra.utils.ansible_runner' (from 'testinfra') [assertion]
+      find_module called for: testinfra.utils.ansible_runner [assertion]
+      read only directory: '/usr/local/lib/python2.7/dist-packages/testinfra/utils' [assertion]
+      rewriting '/usr/local/lib/python2.7/dist-packages/testinfra/utils/ansible_runner.py' [assertion]
+      early skip of rewriting module: json [assertion]
+      early skip of rewriting module: json.decoder [assertion]
+      early skip of rewriting module: json.re [assertion]
+      early skip of rewriting module: json.sys [assertion]
+      early skip of rewriting module: json.struct [assertion]
+      early skip of rewriting module: json.json [assertion]
+      early skip of rewriting module: json.scanner [assertion]
+      early skip of rewriting module: json._json [assertion]
+      early skip of rewriting module: _json [assertion]
+      early skip of rewriting module: json.encoder [assertion]
+      early skip of rewriting module: ConfigParser [assertion]
+      matched marked file 'testinfra.backend.local' (from 'testinfra') [assertion]
+      find_module called for: testinfra.backend.local [assertion]
+      read only directory: '/usr/local/lib/python2.7/dist-packages/testinfra/backend' [assertion]
+      rewriting '/usr/local/lib/python2.7/dist-packages/testinfra/backend/local.py' [assertion]
+      matched marked file 'testinfra.backend.__builtin__' (from 'testinfra') [assertion]
+      find_module called for: testinfra.backend.__builtin__ [assertion]
+      read only directory: '/usr/local/lib/python2.7/dist-packages/testinfra/backend' [assertion]
+      rewriting '/usr/local/lib/python2.7/dist-packages/testinfra/backend/__builtin__.py' [assertion]
+      matched marked file 'testinfra.backend._pytest' (from 'testinfra') [assertion]
+      find_module called for: testinfra.backend._pytest [assertion]
+      read only directory: '/usr/local/lib/python2.7/dist-packages/testinfra/backend' [assertion]
+      rewriting '/usr/local/lib/python2.7/dist-packages/testinfra/backend/_pytest.py' [assertion]
+      matched marked file 'testinfra.backend.testinfra' (from 'testinfra') [assertion]
+      find_module called for: testinfra.backend.testinfra [assertion]
+      read only directory: '/usr/local/lib/python2.7/dist-packages/testinfra/backend' [assertion]
+      rewriting '/usr/local/lib/python2.7/dist-packages/testinfra/backend/testinfra.py' [assertion]
+      matched marked file 'testinfra.backend.base' (from 'testinfra') [assertion]
+      find_module called for: testinfra.backend.base [assertion]
+      read only directory: '/usr/local/lib/python2.7/dist-packages/testinfra/backend' [assertion]
+      rewriting '/usr/local/lib/python2.7/dist-packages/testinfra/backend/base.py' [assertion]
+      matched marked file 'testinfra.backend.collections' (from 'testinfra') [assertion]
+      find_module called for: testinfra.backend.collections [assertion]
+      read only directory: '/usr/local/lib/python2.7/dist-packages/testinfra/backend' [assertion]
+      rewriting '/usr/local/lib/python2.7/dist-packages/testinfra/backend/collections.py' [assertion]
+      matched marked file 'testinfra.backend.locale' (from 'testinfra') [assertion]
+      find_module called for: testinfra.backend.locale [assertion]
+      read only directory: '/usr/local/lib/python2.7/dist-packages/testinfra/backend' [assertion]
+      rewriting '/usr/local/lib/python2.7/dist-packages/testinfra/backend/locale.py' [assertion]
+      matched marked file 'testinfra.backend.logging' (from 'testinfra') [assertion]
+      find_module called for: testinfra.backend.logging [assertion]
+      read only directory: '/usr/local/lib/python2.7/dist-packages/testinfra/backend' [assertion]
+      rewriting '/usr/local/lib/python2.7/dist-packages/testinfra/backend/logging.py' [assertion]
+      matched marked file 'testinfra.backend.pipes' (from 'testinfra') [assertion]
+      find_module called for: testinfra.backend.pipes [assertion]
+      read only directory: '/usr/local/lib/python2.7/dist-packages/testinfra/backend' [assertion]
+      rewriting '/usr/local/lib/python2.7/dist-packages/testinfra/backend/pipes.py' [assertion]
+      early skip of rewriting module: pipes [assertion]
+      matched marked file 'testinfra.backend.subprocess' (from 'testinfra') [assertion]
+      find_module called for: testinfra.backend.subprocess [assertion]
+      read only directory: '/usr/local/lib/python2.7/dist-packages/testinfra/backend' [assertion]
+      rewriting '/usr/local/lib/python2.7/dist-packages/testinfra/backend/subprocess.py' [assertion]
+      early skip of rewriting module: encodings.ascii [assertion]
+      finish pytest_make_collect_report --> <CollectReport 'tests/test_default.py' lenresult=0 outcome='failed'> [hook]
+      pytest_exception_interact [hook]
+          report: <CollectReport 'tests/test_default.py' lenresult=0 outcome='failed'>
+          node: <Module tests/test_default.py>
+          call: <CallInfo when='collect' exception: import file mismatch:
+imported module 'test_default' has this __file__ attribute:
+  /home/michael/eas-code/ansible/homelab/roles/micko920.base-system/molecule/docker/tests/test_default.py
+which is not the same as the test file we want to collect:
+  /home/michael/eas-code/ansible/homelab/roles/homelab_base_system/molecule/docker/tests/test_default.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules>
+      finish pytest_exception_interact --> [] [hook]
+      pytest_collectreport [hook]
+          report: <CollectReport 'tests/test_default.py' lenresult=0 outcome='failed'>
+      finish pytest_collectreport --> [] [hook]
+      pytest_collection_modifyitems [hook]
+          items: []
+          session: <Session docker exitstatus=0 testsfailed=1 testscollected=0>
+          config: <_pytest.config.Config object at 0x7fdd1aa7dfd0>
+      finish pytest_collection_modifyitems --> [] [hook]
+      pytest_collection_finish [hook]
+          session: <Session docker exitstatus=0 testsfailed=1 testscollected=0>
+        pytest_report_collectionfinish [hook]
+            items: []
+            config: <_pytest.config.Config object at 0x7fdd1aa7dfd0>
+            startdir: /home/michael/eas-code/ansible/homelab/roles/homelab_base_system/molecule/docker
+        finish pytest_report_collectionfinish --> [] [hook]
+      finish pytest_collection_finish --> [] [hook]
+    finish pytest_collection --> [] [hook]
+    pytest_runtestloop [hook]
+        session: <Session docker exitstatus=0 testsfailed=1 testscollected=0>
+    pytest_keyboard_interrupt [hook]
+        excinfo: /usr/local/lib/python2.7/dist-packages/_pytest/main.py:264: Interrupted: 1 errors during collection
+    finish pytest_keyboard_interrupt --> [] [hook]
+    pytest_sessionfinish [hook]
+        session: <Session docker exitstatus=2 testsfailed=1 testscollected=0>
+        exitstatus: 2
+      pytest_terminal_summary [hook]
+          config: <_pytest.config.Config object at 0x7fdd1aa7dfd0>
+          exitstatus: 2
+          terminalreporter: <_pytest.terminal.TerminalReporter object at 0x7fdd1a8d23d0>
+      finish pytest_terminal_summary --> [] [hook]
+    finish pytest_sessionfinish --> [] [hook]
+    pytest_unconfigure [hook]
+        config: <_pytest.config.Config object at 0x7fdd1aa7dfd0>
+    finish pytest_unconfigure --> [] [hook]
