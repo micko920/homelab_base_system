@@ -1,0 +1,3 @@
+../../micko920.base-system/molecule/docker docker
+../../micko920.base-system/molecule/vagrant vagrant
+../../micko920.base-system/molecule/aws-ec2 aws-ec2

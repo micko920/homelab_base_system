@@ -1,0 +1,83 @@
+---
+# This playbook contains common plays that will be run on all nodes.
+#
+
+# APT can be run from CRON jobs so just need to test lock deletion and then
+# wait.
+#- name: Wait for apt lock release
+# wait_for:
+#   path: /var/lib/apt/lists/lock
+#   state: absent
+#   timeout: 180
+#   msg: "APT lock file still present. APT cron jobs are running."
+# ignore_errors: true
+
+- name: Wait for automatic system updates
+  become: yes
+  shell: while sudo fuser /var/lib/dpkg/lock >/dev/null 2>&1; do sleep 1; done;
+  changed_when: False
+
+# - name: Wait for any possibly running unattended upgrade to finish
+#   raw: systemd-run --property="After=apt-daily.service apt-daily-upgrade.service" --wait /bin/true
+
+# Force control if locked not released
+# - name: Remove APT lock file
+#   file:
+#     path: /var/lib/apt/lists/lock
+#     state: absent
+#   ignore_errors: true
+
+
+# This gives a warning, see below. This can not be stopped. It is a bit of a
+# chicken and egg problem. It resolves itself once through this file.  It
+# relates to the apt, python-pip and pacakage ansible module.
+#
+# [WARNING]: Updating cache and auto-installing missing dependency: python-apt
+# [WARNING]: Could not find aptitude. Using apt-get instead
+# Only have this to shut the apt module up. Please remove once the ansible
+# module stops using the apptitude tool
+- name: Install aptitude using apt
+  become: yes
+  become_user: root
+  apt:
+    name: aptitude
+    state: present
+    update_cache: yes
+    force_apt_get: yes
+
+- name: Make sure pip is installed
+  become: yes
+  become_user: root
+  apt:
+    name: python-pip
+    state: present
+
+
+- name: resolve platform specific vars
+  include_vars: '{{ item }}'
+  with_first_found:
+    - files:
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
+      skip: true
+      paths:
+        - '{{ role_path }}/vars'
+
+- name: installing python os pkgs...
+  become: yes
+  become_user: root
+  apt:
+    name: '{{ python_pkgs }}'
+    state: present
+    update_cache: true
+
+
+# One day when aptitude is not needed
+# - name: remove aptitude
+#   become: yes
+#   become_user: root
+#   apt:
+#     name: aptitude
+#     state: absent
+#     autoremove: true

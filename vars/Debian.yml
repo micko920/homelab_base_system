@@ -1,0 +1,8 @@
+---
+# Debian variables
+python_pkgs:
+  - python
+  - python-dev
+  - python-apt
+  - python-virtualenv
+  - python-pip
