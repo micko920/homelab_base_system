@@ -12,10 +12,16 @@ python_pkgs:
   - python-virtualenv
   - python-pip
 
-rm_python_pkgs: []
+rm_python_pkgs:
+  - python3-pytest
+  - python-pytest
 
 rm_pip2_python_pkgs:
   - testinfra
+  - pytest
 
-pip_python_pkgs:
+rm_pip3_python_pkgs:
   - testinfra
+  - pytest
+
+pip_python_pkgs: []
