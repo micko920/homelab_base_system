@@ -50,6 +50,14 @@
     update_cache: yes
     force_apt_get: yes
 
+- name: procps is installed
+  become: yes
+  become_user: root
+  apt:
+    name: procps
+    state: present
+    update_cache: true
+
 - name: Make sure pip is installed
   become: yes
   become_user: root
