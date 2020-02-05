@@ -4,7 +4,7 @@
 
 # APT can be run from CRON jobs so just need to test lock deletion and then
 # wait.
-#- name: Wait for apt lock release
+# - name: Wait for apt lock release
 # wait_for:
 #   path: /var/lib/apt/lists/lock
 #   state: absent
@@ -13,14 +13,14 @@
 # ignore_errors: true
 
 - name: Wait for automatic system updates
-  become: yes
+  become: true
   shell: while sudo fuser /var/lib/dpkg/lock >/dev/null 2>&1; do sleep 1; done;
-  changed_when: False
+  changed_when: false
 
 - name: Wait for lock release on system packages front end
-  become: yes
+  become: true
   shell: while sudo fuser /var/lib/dpkg/lock-frontend >/dev/null 2>&1; do sleep 1; done;
-  changed_when: False
+  changed_when: false
 
 # - name: Wait for any possibly running unattended upgrade to finish
 #   raw: systemd-run --property="After=apt-daily.service apt-daily-upgrade.service" --wait /bin/true
@@ -42,16 +42,16 @@
 # Only have this to shut the apt module up. Please remove once the ansible
 # module stops using the apptitude tool
 - name: Install aptitude using apt
-  become: yes
+  become: true
   become_user: root
   apt:
     name: aptitude
     state: present
-    update_cache: yes
-    force_apt_get: yes
+    update_cache: true
+    force_apt_get: true
 
 - name: procps is installed
-  become: yes
+  become: true
   become_user: root
   apt:
     name: procps
@@ -59,7 +59,7 @@
     update_cache: true
 
 - name: Make sure pip is installed
-  become: yes
+  become: true
   become_user: root
   apt:
     name:
@@ -80,7 +80,7 @@
         - '{{ role_path }}/vars'
 
 - name: installing python os pkgs...
-  become: yes
+  become: true
   become_user: root
   apt:
     name: '{{ python_pkgs }}'
@@ -89,7 +89,7 @@
   when: (python_pkgs is defined) and (python_pkgs|length > 0)
 
 - name: remove old pip2 packages
-  become: yes
+  become: true
   become_user: root
   pip:
     name: '{{ rm_pip2_python_pkgs }}'
@@ -98,7 +98,7 @@
   when: (rm_pip3_python_pkgs is defined) and (rm_pip3_python_pkgs|length > 0)
 
 - name: remove old python libs
-  become: yes
+  become: true
   become_user: root
   apt:
     name: '{{ rm_python_pkgs }}'
@@ -107,7 +107,7 @@
   when: (rm_python_pkgs is defined) and (rm_python_pkgs|length > 0)
 
 - name: remove some pip3 packages
-  become: yes
+  become: true
   become_user: root
   pip:
     name: '{{ rm_pip3_python_pkgs }}'
@@ -116,7 +116,7 @@
   when: (rm_pip3_python_pkgs is defined) and (rm_pip3_python_pkgs|length > 0)
 
 - name: install pip3 packages
-  become: yes
+  become: true
   become_user: root
   pip:
     name: '{{ pip_python_pkgs }}'
@@ -124,10 +124,26 @@
     state: present
   when: (pip_python_pkgs is defined) and (pip_python_pkgs|length > 0)
 
+- name: check PID 1
+  become: true
+  become_user: root
+  stat:
+    path: "/proc/1/exe"
+    follow: false
+  register: PID_1_EXE
+  when: ansible_system is match("Linux")
+
+- name: Set the PID_1 fact
+  set_fact:
+    systemd_pid_1: true
+  when:
+    - ansible_system is match("Linux")
+    - PID_1_EXE.stat.islnk is defined and PID_1_EXE.stat.islnk
+    - PID_1_EXE.stat.lnk_target|basename is match("systemd")
 
 # One day when aptitude is not needed
 # - name: remove aptitude
-#   become: yes
+#   become: true
 #   become_user: root
 #   apt:
 #     name: aptitude
