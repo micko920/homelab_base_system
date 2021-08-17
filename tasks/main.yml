@@ -33,6 +33,42 @@
 #   ignore_errors: true
 
 
+# Force update of cahce on Debian Buster to allow changes to repository.
+#
+# Failed to update apt cache:
+  # W:This must be accepted explicitly before updates for this repository can
+  # be applied. See apt-secure(8) manpage for details., E:Repository
+  # 'http://security.debian.org/debian-security buster/updates InRelease'
+  # changed its 'Suite' value from 'stable' to 'oldstable', W:This must be
+  # accepted explicitly before updates for this repository can be applied. See
+  # apt-secure(8) manpage for details., W:Repository
+  # 'http://deb.debian.org/debian buster InRelease' changed its 'Version' value
+  # from '10.0' to '10.10', E:Repository 'http://deb.debian.org/debian buster
+  # InRelease' changed its 'Suite' value from 'stable' to 'oldstable'
+#
+#
+- name: Update APT cache block
+  block:
+    - name: Update APT cache
+      become: true
+      apt:
+        update_cache: yes
+      changed_when: false
+      register: _pkg_result
+      until: _pkg_result is succeeded
+  rescue:
+    - name: Retry APT cache update with allow-releaseinfo-change
+      become: true
+      command: apt-get update --allow-releaseinfo-change
+      args:
+        warn: false
+      changed_when: false
+      register: _pkg_result
+      until: _pkg_result is succeeded
+  when:
+    - ansible_distribution == "Debian"
+    - ansible_distribution_major_version == "10"
+
 # This gives a warning, see below. This can not be stopped. It is a bit of a
 # chicken and egg problem. It resolves itself once through this file.  It
 # relates to the apt, python-pip and pacakage ansible module.
@@ -50,6 +86,7 @@
     update_cache: true
     force_apt_get: true
 
+
 - name: procps is installed
   become: true
   become_user: root
@@ -65,6 +102,13 @@
     name:
       - python3-pip
     state: present
+
+- name: Update pip to fix Rust compile requirement, new pip uses binary images
+  become: true
+  shell: pip3 install --upgrade pip
+  register: PIP_UPGRADE
+  changed_when: 
+    - '"Successfully installed" in PIP_UPGRADE.stdout'
 
 
 - name: resolve platform specific vars
