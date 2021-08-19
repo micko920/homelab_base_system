@@ -47,6 +47,12 @@
   # InRelease' changed its 'Suite' value from 'stable' to 'oldstable'
 #
 #
+
+
+- name: Print the distro
+  debug:
+    msg: Distro {{ ansible_distribution }} Version {{ ansible_distribution_major_version }}
+
 - name: Update APT cache block
   block:
     - name: Update APT cache
@@ -68,6 +74,7 @@
   when:
     - ansible_distribution == "Debian"
     - ansible_distribution_major_version == "10"
+
 
 # This gives a warning, see below. This can not be stopped. It is a bit of a
 # chicken and egg problem. It resolves itself once through this file.  It
@@ -183,6 +190,12 @@
     - ansible_system is match("Linux")
     - PID_1_EXE.stat.islnk is defined and PID_1_EXE.stat.islnk
     - PID_1_EXE.stat.lnk_target|basename is match("systemd")
+
+- name: Run apt-get update as a separate step to ensure cache is updated
+  become: true
+  become_user: root
+  apt:
+    update_cache: yes
 
 # One day when aptitude is not needed
 # - name: remove aptitude
