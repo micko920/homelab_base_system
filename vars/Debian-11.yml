@@ -7,7 +7,7 @@ python_pkgs:
   - python3-pip
 
 rm_pip3_python_pkgs:
-  - testinfra
+  - pytest-testinfra
   - pytest
 
 pip_python_pkgs: []

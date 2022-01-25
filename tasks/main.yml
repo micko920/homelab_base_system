@@ -110,14 +110,6 @@
       - python3-pip
     state: present
 
-- name: Update pip to fix Rust compile requirement, new pip uses binary images
-  become: true
-  shell: pip3 install --upgrade pip
-  register: PIP_UPGRADE
-  changed_when: 
-    - '"Successfully installed" in PIP_UPGRADE.stdout'
-
-
 - name: resolve platform specific vars
   include_vars: '{{ item }}'
   with_first_found:
