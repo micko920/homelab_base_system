@@ -2,21 +2,6 @@
 # This playbook contains common plays that will be run on all nodes.
 #
 
-# This is a fix for new debian releases
-#
-- name: Use lsb-release on debian
-  become: true
-  shell: lsb_release -s -r
-  changed_when: false
-  register: _lsb_release
-
-- name: Set version number on debian
-  set_fact:
-    ansible_distribution_version: "{{ _lsb_release.stdout.split('-')[0].split('.')[0] }}"
-    ansible_distribution_major_version: "{{ _lsb_release.stdout.split('-')[0].split('.')[0] }}"
-  when:
-    - ansible_distribution == "Debian"
-
 # APT can be run from CRON jobs so just need to test lock deletion and then
 # wait.
 # - name: Wait for apt lock release
@@ -63,10 +48,6 @@
 #
 #
 
-
-- name: Print the distro
-  debug:
-    msg: Distro {{ ansible_distribution }} Version {{ ansible_distribution_major_version }}
 
 - name: Update APT cache block
   block:
@@ -124,6 +105,25 @@
     name:
       - python3-pip
     state: present
+
+# This is a fix for new debian releases
+#
+- name: Use lsb-release on debian
+  become: true
+  shell: lsb_release -s -r
+  changed_when: false
+  register: _lsb_release
+
+- name: Set version number on debian
+  set_fact:
+    ansible_distribution_version: "{{ _lsb_release.stdout.split('-')[0].split('.')[0] }}"
+    ansible_distribution_major_version: "{{ _lsb_release.stdout.split('-')[0].split('.')[0] }}"
+  when:
+    - ansible_distribution == "Debian"
+
+- name: Print the distro
+  debug:
+    msg: Distro {{ ansible_distribution }} Version {{ ansible_distribution_major_version }}
 
 - name: resolve platform specific vars
   include_vars: '{{ item }}'
