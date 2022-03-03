@@ -108,6 +108,14 @@
 
 # This is a fix for new debian releases
 #
+- name: Make sure lsb_release is installed
+  become: true
+  become_user: root
+  apt:
+    name:
+      - lsb-release
+    state: present
+
 - name: Use lsb-release on debian
   become: true
   shell: lsb_release -s -r
