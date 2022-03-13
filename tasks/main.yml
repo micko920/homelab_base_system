@@ -122,6 +122,17 @@
   changed_when: false
   register: _lsb_release
 
+
+# Fix for new debian/linux setup, to become another user other than root
+# https://docs.ansible.com/ansible/latest/user_guide/become.html#risks-of-becoming-an-unprivileged-user
+- name: Install ACL tools to allow become to work
+  become: true
+  become_user: root
+  apt:
+    name:
+      - acl
+    state: present
+
 - name: Set version number on debian
   set_fact:
     ansible_distribution_version: "{{ _lsb_release.stdout.split('-')[0].split('.')[0] }}"
